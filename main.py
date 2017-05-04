@@ -2,7 +2,7 @@ from Classes.Pieza import Pieza
 from Classes.Tela import Tela
 from operator import attrgetter
 
-ancho_del_telon = 24;
+ancho_del_telon = 24
 renglones = []
 piezas = []
 telas = []
@@ -38,7 +38,7 @@ for tela in telas:
             pieza.setasignada()
         else:
             telas.append(Tela(int(pieza.getalto()), ancho_del_telon))
-#Finaliza constructivo
+# Finaliza constructivo
 
 for tela in telas:
     print(tela.getlibre())
