@@ -31,19 +31,14 @@ piezas.sort(key=attrgetter("area"), reverse=True)
 telas.append(Tela(int(piezas[0].getalto()), ancho_del_telon))
 
 # Inicia constructivo
-for pieza in piezas:
-    for tela in telas:
-        if pieza.getancho() <= tela.getlibre() and pieza.getalto() <= tela.getaltura() and pieza.getasignada() is False:
+for tela in telas:
+    for pieza in piezas:
+        if pieza.getalto() <= tela.getaltura() and pieza.getancho() <= tela.getlibre() and pieza.getasignada() is False:
             tela.setusado(pieza.getancho())
             pieza.setasignada()
-    #if pieza.getasignada() is False:
+        else:
             telas.append(Tela(int(pieza.getalto()), ancho_del_telon))
-
 #Finaliza constructivo
-
-for pieza in piezas:
-    print (pieza.tostring())
-
 
 for tela in telas:
     print(tela.getlibre())
