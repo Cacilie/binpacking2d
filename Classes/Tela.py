@@ -7,6 +7,7 @@ class Tela:
         self.mapa = []
         self.mapa = [self.hilo for x in range(self.altura)]
         self.usado = 0
+        self.cosido = []
 
     def getmapa(self):
         return self.mapa
@@ -19,3 +20,12 @@ class Tela:
 
     def getaltura(self):
         return self.altura
+
+    def tostring(self):
+        return "Altura: " + str(self.altura) + " Usado: " + str(self.usado) + " Asignados " + str(self.cosido)
+
+    def coser(self, pieza_id):
+        self.cosido.append(pieza_id)
+
+    def getcosidos(self):
+        return self.cosido

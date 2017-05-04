@@ -25,20 +25,23 @@ for pieza_info in renglones:
     piezas.append(nuevaPieza)
     i += 1
 
+piezas.sort(key=attrgetter("alto"), reverse=True)
+
+for pieza in piezas:
+    telas.append(Tela(int(pieza.getalto()), ancho_del_telon))
+
 piezas.sort(key=attrgetter("area"), reverse=True)
 
 
-telas.append(Tela(int(piezas[0].getalto()), ancho_del_telon))
-
-# Inicia constructivo
-for tela in telas:
-    for pieza in piezas:
-        if pieza.getalto() <= tela.getaltura() and pieza.getancho() <= tela.getlibre() and pieza.getasignada() is False:
-            tela.setusado(pieza.getancho())
+for pieza in piezas:
+    for tela in telas:
+        if pieza.getancho() <= tela.getlibre() and pieza.getalto() <= tela.getaltura() and pieza.getasignada() is False:
             pieza.setasignada()
-        else:
-            telas.append(Tela(int(pieza.getalto()), ancho_del_telon))
-# Finaliza constructivo
+            tela.coser(pieza.getid())
+            tela.setusado(pieza.getancho())
 
+
+
+print("\nTelas\n")
 for tela in telas:
-    print(tela.getlibre())
+    print (tela.tostring())
