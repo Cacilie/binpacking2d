@@ -4,12 +4,3 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
-ancho_del_telon	/home/edgar/Documentos/Universidad/BP2d/main.py	/^ancho_del_telon = 24$/;"	variable	line:5
-renglones	/home/edgar/Documentos/Universidad/BP2d/main.py	/^renglones = []$/;"	variable	line:6
-piezas	/home/edgar/Documentos/Universidad/BP2d/main.py	/^piezas = []$/;"	variable	line:7
-telas	/home/edgar/Documentos/Universidad/BP2d/main.py	/^telas = []$/;"	variable	line:8
-nombre_instancia	/home/edgar/Documentos/Universidad/BP2d/main.py	/^nombre_instancia = input("Ingrese el nombre de la instancia \\n")$/;"	variable	line:9
-archivo	/home/edgar/Documentos/Universidad/BP2d/main.py	/^archivo = open("Instancias\/" + nombre_instancia + ".csv")$/;"	variable	line:10
-no_piezas	/home/edgar/Documentos/Universidad/BP2d/main.py	/^no_piezas = int(len(renglones))$/;"	variable	line:20
-i	/home/edgar/Documentos/Universidad/BP2d/main.py	/^i = 1$/;"	variable	line:22
-nuevaPieza	/home/edgar/Documentos/Universidad/BP2d/main.py	/^    nuevaPieza = Pieza(float(pieza_info[0]), float(pieza_info[1]), int(i))$/;"	variable	line:24

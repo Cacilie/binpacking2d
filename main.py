@@ -41,7 +41,6 @@ for pieza in piezas:
             tela.setusado(pieza.getancho())
 
 
-
 print("\nTelas\n")
 for tela in telas:
     print (tela.tostring())
