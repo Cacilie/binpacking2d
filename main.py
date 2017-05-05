@@ -44,7 +44,6 @@ for pieza in piezas:
             tela.setusado(pieza.getancho())
 '''
 
-contador = 0
 i_pieza = 0
 i_tela = 0
 while i_pieza < len(piezas):
