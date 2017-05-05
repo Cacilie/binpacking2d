@@ -37,4 +37,4 @@ nuevaPieza	/Users/Edgar/Documents/BP2d/main.py	/^    nuevaPieza = Pieza(float(pi
 contador	/Users/Edgar/Documents/BP2d/main.py	/^contador = 0$/;"	variable	line:47
 i_pieza	/Users/Edgar/Documents/BP2d/main.py	/^i_pieza = 0$/;"	variable	line:48
 i_tela	/Users/Edgar/Documents/BP2d/main.py	/^i_tela = 0$/;"	variable	line:49
-altura_total_si	/Users/Edgar/Documents/BP2d/main.py	/^altura_total_si = 0$/;"	variable	line:63
+altura_total_si	/Users/Edgar/Documents/BP2d/main.py	/^altura_total_si = 0$/;"	variable	line:64

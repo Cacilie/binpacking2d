@@ -25,12 +25,12 @@ for pieza_info in renglones:
     piezas.append(nuevaPieza)
     i += 1
 
-piezas.sort(key=attrgetter("alto"), reverse=False)
+piezas.sort(key=attrgetter("alto"), reverse=True)
 
 for pieza in piezas:
     telas.append(Tela(int(pieza.getalto()), ancho_del_telon))
 
-piezas.sort(key=attrgetter("area"), reverse=False)
+piezas.sort(key=attrgetter("area"), reverse=True)
 
 print("Piezas\n")
 
@@ -55,8 +55,9 @@ while i_pieza < len(piezas):
         i_pieza += 1
     else:
         i_tela += 1
-    if i_tela == len(piezas):
-        print("Sobrepaso!")
+        if i_tela == len(piezas):
+            telas.append(Tela(int(piezas[i_pieza].getancho()), ancho_del_telon))
+
 
 print("\nTelas\n")
 
