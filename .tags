@@ -3,31 +3,38 @@
 !_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
-!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
-Pieza	/home/edgar/Documentos/Universidad/BP2d/Classes/Pieza.py	/^class Pieza:$/;"	class	line:1
-__init__	/home/edgar/Documentos/Universidad/BP2d/Classes/Pieza.py	/^    def __init__(self, lado1, lado2, id):$/;"	member	line:2	class:Pieza
-tostring	/home/edgar/Documentos/Universidad/BP2d/Classes/Pieza.py	/^    def tostring(self):$/;"	member	line:11	class:Pieza
-getmap	/home/edgar/Documentos/Universidad/BP2d/Classes/Pieza.py	/^    def getmap(self):$/;"	member	line:14	class:Pieza
-getalto	/home/edgar/Documentos/Universidad/BP2d/Classes/Pieza.py	/^    def getalto(self):$/;"	member	line:17	class:Pieza
-getancho	/home/edgar/Documentos/Universidad/BP2d/Classes/Pieza.py	/^    def getancho(self):$/;"	member	line:20	class:Pieza
-getasignada	/home/edgar/Documentos/Universidad/BP2d/Classes/Pieza.py	/^    def getasignada(self):$/;"	member	line:23	class:Pieza
-setasignada	/home/edgar/Documentos/Universidad/BP2d/Classes/Pieza.py	/^    def setasignada(self):$/;"	member	line:26	class:Pieza
-getid	/home/edgar/Documentos/Universidad/BP2d/Classes/Pieza.py	/^    def getid(self):$/;"	member	line:29	class:Pieza
-Tela	/home/edgar/Documentos/Universidad/BP2d/Classes/Tela.py	/^class Tela:$/;"	class	line:1
-__init__	/home/edgar/Documentos/Universidad/BP2d/Classes/Tela.py	/^    def __init__(self, altura, anchura):$/;"	member	line:2	class:Tela
-getmapa	/home/edgar/Documentos/Universidad/BP2d/Classes/Tela.py	/^    def getmapa(self):$/;"	member	line:12	class:Tela
-getlibre	/home/edgar/Documentos/Universidad/BP2d/Classes/Tela.py	/^    def getlibre(self):$/;"	member	line:15	class:Tela
-setusado	/home/edgar/Documentos/Universidad/BP2d/Classes/Tela.py	/^    def setusado(self, por_usar):$/;"	member	line:18	class:Tela
-getaltura	/home/edgar/Documentos/Universidad/BP2d/Classes/Tela.py	/^    def getaltura(self):$/;"	member	line:21	class:Tela
-tostring	/home/edgar/Documentos/Universidad/BP2d/Classes/Tela.py	/^    def tostring(self):$/;"	member	line:24	class:Tela
-coser	/home/edgar/Documentos/Universidad/BP2d/Classes/Tela.py	/^    def coser(self, pieza_id):$/;"	member	line:27	class:Tela
-getcosidos	/home/edgar/Documentos/Universidad/BP2d/Classes/Tela.py	/^    def getcosidos(self):$/;"	member	line:30	class:Tela
-ancho_del_telon	/home/edgar/Documentos/Universidad/BP2d/main.py	/^ancho_del_telon = 24$/;"	variable	line:5
-renglones	/home/edgar/Documentos/Universidad/BP2d/main.py	/^renglones = []$/;"	variable	line:6
-piezas	/home/edgar/Documentos/Universidad/BP2d/main.py	/^piezas = []$/;"	variable	line:7
-telas	/home/edgar/Documentos/Universidad/BP2d/main.py	/^telas = []$/;"	variable	line:8
-nombre_instancia	/home/edgar/Documentos/Universidad/BP2d/main.py	/^nombre_instancia = input("Ingrese el nombre de la instancia \\n")$/;"	variable	line:9
-archivo	/home/edgar/Documentos/Universidad/BP2d/main.py	/^archivo = open("Instancias\/" + nombre_instancia + ".csv")$/;"	variable	line:10
-no_piezas	/home/edgar/Documentos/Universidad/BP2d/main.py	/^no_piezas = int(len(renglones))$/;"	variable	line:20
-i	/home/edgar/Documentos/Universidad/BP2d/main.py	/^i = 1$/;"	variable	line:22
-nuevaPieza	/home/edgar/Documentos/Universidad/BP2d/main.py	/^    nuevaPieza = Pieza(float(pieza_info[0]), float(pieza_info[1]), int(i))$/;"	variable	line:24
+!_TAG_PROGRAM_VERSION	5.8	//
+Pieza	/Users/Edgar/Documents/BP2d/Classes/Pieza.py	/^class Pieza:$/;"	class	line:1
+__init__	/Users/Edgar/Documents/BP2d/Classes/Pieza.py	/^    def __init__(self, lado1, lado2, id):$/;"	member	line:2	class:Pieza
+tostring	/Users/Edgar/Documents/BP2d/Classes/Pieza.py	/^    def tostring(self):$/;"	member	line:11	class:Pieza
+getmap	/Users/Edgar/Documents/BP2d/Classes/Pieza.py	/^    def getmap(self):$/;"	member	line:14	class:Pieza
+getalto	/Users/Edgar/Documents/BP2d/Classes/Pieza.py	/^    def getalto(self):$/;"	member	line:17	class:Pieza
+getancho	/Users/Edgar/Documents/BP2d/Classes/Pieza.py	/^    def getancho(self):$/;"	member	line:20	class:Pieza
+getasignada	/Users/Edgar/Documents/BP2d/Classes/Pieza.py	/^    def getasignada(self):$/;"	member	line:23	class:Pieza
+setasignada	/Users/Edgar/Documents/BP2d/Classes/Pieza.py	/^    def setasignada(self):$/;"	member	line:26	class:Pieza
+getid	/Users/Edgar/Documents/BP2d/Classes/Pieza.py	/^    def getid(self):$/;"	member	line:29	class:Pieza
+Tela	/Users/Edgar/Documents/BP2d/Classes/Tela.py	/^class Tela:$/;"	class	line:1
+__init__	/Users/Edgar/Documents/BP2d/Classes/Tela.py	/^    def __init__(self, altura, anchura):$/;"	member	line:2	class:Tela
+getmapa	/Users/Edgar/Documents/BP2d/Classes/Tela.py	/^    def getmapa(self):$/;"	member	line:12	class:Tela
+getlibre	/Users/Edgar/Documents/BP2d/Classes/Tela.py	/^    def getlibre(self):$/;"	member	line:15	class:Tela
+setusado	/Users/Edgar/Documents/BP2d/Classes/Tela.py	/^    def setusado(self, por_usar):$/;"	member	line:18	class:Tela
+getaltura	/Users/Edgar/Documents/BP2d/Classes/Tela.py	/^    def getaltura(self):$/;"	member	line:21	class:Tela
+tostring	/Users/Edgar/Documents/BP2d/Classes/Tela.py	/^    def tostring(self):$/;"	member	line:24	class:Tela
+coser	/Users/Edgar/Documents/BP2d/Classes/Tela.py	/^    def coser(self, pieza_id):$/;"	member	line:27	class:Tela
+getcosidos	/Users/Edgar/Documents/BP2d/Classes/Tela.py	/^    def getcosidos(self):$/;"	member	line:30	class:Tela
+Pieza	/Users/Edgar/Documents/BP2d/main.py	/^from Classes.Pieza import Pieza$/;"	namespace	line:1
+Tela	/Users/Edgar/Documents/BP2d/main.py	/^from Classes.Tela import Tela$/;"	namespace	line:2
+attrgetter	/Users/Edgar/Documents/BP2d/main.py	/^from operator import attrgetter$/;"	namespace	line:3
+ancho_del_telon	/Users/Edgar/Documents/BP2d/main.py	/^ancho_del_telon = 24$/;"	variable	line:5
+renglones	/Users/Edgar/Documents/BP2d/main.py	/^renglones = []$/;"	variable	line:6
+piezas	/Users/Edgar/Documents/BP2d/main.py	/^piezas = []$/;"	variable	line:7
+telas	/Users/Edgar/Documents/BP2d/main.py	/^telas = []$/;"	variable	line:8
+nombre_instancia	/Users/Edgar/Documents/BP2d/main.py	/^nombre_instancia = input("Ingrese el nombre de la instancia \\n")$/;"	variable	line:9
+archivo	/Users/Edgar/Documents/BP2d/main.py	/^archivo = open("Instancias\/" + nombre_instancia + ".csv")$/;"	variable	line:10
+no_piezas	/Users/Edgar/Documents/BP2d/main.py	/^no_piezas = int(len(renglones))$/;"	variable	line:20
+i	/Users/Edgar/Documents/BP2d/main.py	/^i = 1$/;"	variable	line:22
+nuevaPieza	/Users/Edgar/Documents/BP2d/main.py	/^    nuevaPieza = Pieza(float(pieza_info[0]), float(pieza_info[1]), int(i))$/;"	variable	line:24
+contador	/Users/Edgar/Documents/BP2d/main.py	/^contador = 0$/;"	variable	line:47
+i_pieza	/Users/Edgar/Documents/BP2d/main.py	/^i_pieza = 0$/;"	variable	line:48
+i_tela	/Users/Edgar/Documents/BP2d/main.py	/^i_tela = 0$/;"	variable	line:49
+altura_total_si	/Users/Edgar/Documents/BP2d/main.py	/^altura_total_si = 0$/;"	variable	line:63
