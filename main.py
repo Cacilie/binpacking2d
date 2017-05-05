@@ -1,6 +1,7 @@
 from Classes.Pieza import Pieza
 from Classes.Tela import Tela
 from operator import attrgetter
+import grasp
 
 ancho_del_telon = 24
 renglones = []
@@ -35,14 +36,6 @@ piezas.sort(key=attrgetter("area"), reverse=True)
 print("Piezas\n")
 
 
-'''
-for pieza in piezas:
-    for tela in telas:
-        if pieza.getancho() <= tela.getlibre() and pieza.getalto() <= tela.getaltura() and pieza.getasignada() is False:
-            pieza.setasignada()
-            tela.coser(pieza.getid())
-            tela.setusado(pieza.getancho())
-'''
 
 i_pieza = 0
 i_tela = 0
@@ -69,3 +62,5 @@ for tela in telas:
 
 print("\n")
 print("La altura del telón fue de " + str(altura_total_si) + " Unidades  ")
+grasp.crearPosiblesSoluciones(piezas)
+grasp.printPiezas()
