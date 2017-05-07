@@ -7,6 +7,7 @@ ancho_del_telon = 24
 renglones = []
 piezas = []
 telas = []
+orden_solucion_i = []
 nombre_instancia = input("Ingrese el nombre de la instancia \n")
 archivo = open("Instancias/" + nombre_instancia + ".csv")
 for linea in archivo.readlines():
@@ -33,9 +34,6 @@ for pieza in piezas:
 
 piezas.sort(key=attrgetter("area"), reverse=True)
 
-print("Piezas\n")
-
-
 
 i_pieza = 0
 i_tela = 0
@@ -48,19 +46,26 @@ while i_pieza < len(piezas):
     else:
         i_tela += 1
         if i_tela == len(piezas):
-            telas.append(Tela(int(piezas[i_pieza].getancho()), ancho_del_telon))
+            telas.append(
+                Tela(int(piezas[i_pieza].getancho()), ancho_del_telon))
 
-
-print("\nTelas\n")
 
 altura_total_si = 0
 
 for tela in telas:
-    print(tela.tostring())
     if tela.getcosidos() != []:
         altura_total_si += tela.getaltura()
 
-print("\n")
+mejor_solucion = altura_total_si
+for pieza in piezas:
+    orden_solucion_i.append(pieza.getid())
+
 print("La altura del telón fue de " + str(altura_total_si) + " Unidades  ")
-grasp.crearPosiblesSoluciones(piezas)
+print("Con el orden " + str(orden_solucion_i))
+
+grasp.InicializarGrasp(piezas)
+grasp.cambiarStatusPiezas()
+
+print("\nPiezas Grasp\n")
 grasp.printPiezas()
+grasp.calcularPSoluciones()

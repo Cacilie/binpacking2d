@@ -28,3 +28,9 @@ class Pieza:
 
     def getid(self):
         return self.id
+
+    def setnoasignada(self):
+        self.asignada = False
+
+    def getarea(self):
+        return self.area
