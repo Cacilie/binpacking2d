@@ -60,12 +60,14 @@ mejor_solucion = altura_total_si
 for pieza in piezas:
     orden_solucion_i.append(pieza.getid())
 
-print("La altura del telón fue de " + str(altura_total_si) + " Unidades  ")
-print("Con el orden " + str(orden_solucion_i))
+print("Mejor Solución conocida: " + str(mejor_solucion))
+print("\nCon el orden: " + str(orden_solucion_i))
 
 grasp.InicializarGrasp(piezas)
 grasp.cambiarStatusPiezas()
 
-print("\nPiezas Grasp\n")
-grasp.printPiezas()
+#print("\nPiezas Grasp\n")
+#grasp.printPiezas()
+
+print("\nOtros Caminos\n")
 grasp.calcularPSoluciones()
