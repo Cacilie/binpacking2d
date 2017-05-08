@@ -4,16 +4,3 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-Pieza	/Users/Edgar/Documents/BP2d/grasp.py	/^from Classes.Pieza import Pieza$/;"	namespace	line:1
-Tela	/Users/Edgar/Documents/BP2d/grasp.py	/^from Classes.Tela import Tela$/;"	namespace	line:2
-attrgetter	/Users/Edgar/Documents/BP2d/grasp.py	/^from operator import attrgetter$/;"	namespace	line:3
-copy	/Users/Edgar/Documents/BP2d/grasp.py	/^import copy$/;"	namespace	line:4
-random	/Users/Edgar/Documents/BP2d/grasp.py	/^import random$/;"	namespace	line:5
-piezas_l	/Users/Edgar/Documents/BP2d/grasp.py	/^piezas_l = []  # Lista con el roden de las piezas$/;"	variable	line:7
-l_piezas	/Users/Edgar/Documents/BP2d/grasp.py	/^l_piezas = []  # Lista con los objetos de las piezas$/;"	variable	line:8
-p_soluciones	/Users/Edgar/Documents/BP2d/grasp.py	/^p_soluciones = []$/;"	variable	line:9
-InicializarGrasp	/Users/Edgar/Documents/BP2d/grasp.py	/^def InicializarGrasp(li_piezas):$/;"	function	line:12
-returnListaPiezas	/Users/Edgar/Documents/BP2d/grasp.py	/^def returnListaPiezas():$/;"	function	line:19
-cambiarStatusPiezas	/Users/Edgar/Documents/BP2d/grasp.py	/^def cambiarStatusPiezas():$/;"	function	line:24
-printPiezas	/Users/Edgar/Documents/BP2d/grasp.py	/^def printPiezas():$/;"	function	line:30
-calcularPSoluciones	/Users/Edgar/Documents/BP2d/grasp.py	/^def calcularPSoluciones():$/;"	function	line:35
