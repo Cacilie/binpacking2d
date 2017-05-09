@@ -4,7 +4,7 @@ from operator import attrgetter
 import grasp
 import copy
 
-ancho_del_telon = 24
+ancho_del_telon = 90
 renglones = []
 piezas = []
 telas = []
@@ -32,6 +32,7 @@ piezas.sort(key=attrgetter("area"), reverse=True)
 
 
 def constructor(piezas_p):
+    global ancho_del_telon
     telas_a = []
     piezas_a = copy.deepcopy(piezas_p)
     i_pieza = 0
