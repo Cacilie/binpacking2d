@@ -52,8 +52,10 @@ while i_pieza < len(piezas):
 
 altura_total_si = 0
 
+print("Solución\n")
 for tela in telas:
     if tela.getcosidos() != []:
+        print(tela.tostring())        
         altura_total_si += tela.getaltura()
 
 mejor_solucion = altura_total_si
