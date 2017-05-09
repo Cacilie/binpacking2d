@@ -8,7 +8,28 @@ piezas_l = []  # Lista con el roden de las piezas
 l_piezas = []  # Lista con los objetos de las piezas
 p_soluciones = []
 multiples_s = []
+ancho_del_telon = 24
 
+def constructor(piezas_p):
+    telas_a = []
+    piezas_a = copy.deepcopy(piezas_p)
+    i_pieza = 0
+    i_tela = 0
+
+    telas_a.append(Tela(int(piezas_a[0].getalto()), ancho_del_telon))
+    while i_pieza < len(piezas_a):
+        if piezas_a[i_pieza].getancho() <= telas_a[i_tela].getlibre() and piezas_a[i_pieza].getalto() <= telas_a[i_tela].getaltura() and piezas_a[i_pieza].getasignada() is False:
+            piezas_a[i_pieza].setasignada()
+            telas_a[i_tela].coser(piezas_a[i_pieza].getid())
+            telas_a[i_tela].setusado(piezas_a[i_pieza].getancho())
+            i_pieza += 1
+        else:
+            telas_a.append(Tela(int(piezas_a[i_pieza].getalto()), ancho_del_telon))
+            i_tela += 1
+            if i_tela == len(piezas_a):
+                telas_a.append(
+                    Tela(int(piezas_a[i_pieza].getancho()), ancho_del_telon))
+    return telas_a
 
 def InicializarGrasp(li_piezas):
     global piezas_l, l_piezas
