@@ -27,16 +27,13 @@ for pieza_info in renglones:
     piezas.append(nuevaPieza)
     i += 1
 
-piezas.sort(key=attrgetter("alto"), reverse=True)
-
-for pieza in piezas:
-    telas.append(Tela(int(pieza.getalto()), ancho_del_telon))
-
 piezas.sort(key=attrgetter("area"), reverse=True)
 
 
 i_pieza = 0
 i_tela = 0
+
+telas.append(Tela(int(piezas[0].getalto()), ancho_del_telon))
 while i_pieza < len(piezas):
     if piezas[i_pieza].getancho() <= telas[i_tela].getlibre() and piezas[i_pieza].getalto() <= telas[i_tela].getaltura() and piezas[i_pieza].getasignada() is False:
         piezas[i_pieza].setasignada()
@@ -44,6 +41,7 @@ while i_pieza < len(piezas):
         telas[i_tela].setusado(piezas[i_pieza].getancho())
         i_pieza += 1
     else:
+        telas.append( Tela(int(  piezas[i_pieza].getalto()  ), ancho_del_telon)  )
         i_tela += 1
         if i_tela == len(piezas):
             telas.append(
@@ -54,8 +52,8 @@ altura_total_si = 0
 
 print("Solución\n")
 for tela in telas:
+    print(tela.tostring())
     if tela.getcosidos() != []:
-        print(tela.tostring())        
         altura_total_si += tela.getaltura()
 
 mejor_solucion = altura_total_si
