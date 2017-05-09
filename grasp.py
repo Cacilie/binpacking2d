@@ -99,5 +99,4 @@ def calcularPSoluciones():
             ids_seleccionados.append(posibles_agregar[eleccion])
         ids_seleccionados.reverse()
         multiples_s.append(ids_seleccionados)
-    for m in multiples_s:
-        print(m)
+    

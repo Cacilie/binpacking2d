@@ -4,15 +4,15 @@ class Pieza:
         self.ancho = max([lado1, lado2])
         self.id = id
         self.area = lado1 * lado2
-        self.hilo = [self.id for x in range(int(self.ancho))]
-        self.mapa = [self.hilo for x in range(int(self.alto))]
+        # self.hilo = [self.id for x in range(int(self.ancho))]
+        # self.mapa = [self.hilo for x in range(int(self.alto))]
         self.asignada = False
 
     def tostring(self):
         return "Alto .- " + str(self.alto) + " Ancho .- " + str(self.ancho) + " ID: " + str(self.id) + " Area " + str(self.area) + " Asignada " + str(self.asignada)
 
-    def getmap(self):
-        return self.mapa
+    # def getmap(self):
+    #        return self.mapa
 
     def getalto(self):
         return self.alto
