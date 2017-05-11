@@ -143,18 +143,21 @@ if resultadograsp == -1:
     print("\nNo hubo mejora\n")
 elif resultadograsp[1] == 0:
     print("\n" + str(resultadograsp[0])+ " Unidades de altura\n")
+    if len(tela_movimiento) > 0:
+        print("\nCon la distribucion\n")
+        comprobar_altura = 0
+        for hilo in tela_movimiento:
+            print(hilo.getcosidos())
+            comprobar_altura += hilo.getaltura()
+        print("COMPROBACION:: "+ str(comprobar_altura))
+    else:
+        print("\nCon la misma distribucion inicial\n")
+else:
+    print("\n" + str(resultadograsp[0])+ " Unidades de altura\n")
     print("\nCon la distribucion\n")
     comprobar_altura = 0
+    tela_movimiento = resultadograsp[1]
     for hilo in tela_movimiento:
         print(hilo.getcosidos())
         comprobar_altura += hilo.getaltura()
     print("COMPROBACION:: "+ str(comprobar_altura))
-else:
-     print("\n" + str(resultadograsp[0])+ " Unidades de altura\n")
-     print("\nCon la distribucion\n")
-     comprobar_altura = 0
-     tela_movimiento = resultadograsp[1]
-     for hilo in tela_movimiento:
-         print(hilo.getcosidos())
-         comprobar_altura += hilo.getaltura()
-     print("COMPROBACION:: "+ str(comprobar_altura))
