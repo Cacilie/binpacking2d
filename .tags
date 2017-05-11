@@ -7,7 +7,6 @@
 Pieza	/Users/Edgar/Documents/BP2d/Classes/Pieza.py	/^class Pieza:$/;"	class	line:1
 __init__	/Users/Edgar/Documents/BP2d/Classes/Pieza.py	/^    def __init__(self, lado1, lado2, id):$/;"	member	line:2	class:Pieza
 tostring	/Users/Edgar/Documents/BP2d/Classes/Pieza.py	/^    def tostring(self):$/;"	member	line:11	class:Pieza
-getmap	/Users/Edgar/Documents/BP2d/Classes/Pieza.py	/^    def getmap(self):$/;"	member	line:14	class:Pieza
 getalto	/Users/Edgar/Documents/BP2d/Classes/Pieza.py	/^    def getalto(self):$/;"	member	line:17	class:Pieza
 getancho	/Users/Edgar/Documents/BP2d/Classes/Pieza.py	/^    def getancho(self):$/;"	member	line:20	class:Pieza
 getasignada	/Users/Edgar/Documents/BP2d/Classes/Pieza.py	/^    def getasignada(self):$/;"	member	line:23	class:Pieza
@@ -17,7 +16,6 @@ setnoasignada	/Users/Edgar/Documents/BP2d/Classes/Pieza.py	/^    def setnoasigna
 getarea	/Users/Edgar/Documents/BP2d/Classes/Pieza.py	/^    def getarea(self):$/;"	member	line:35	class:Pieza
 Tela	/Users/Edgar/Documents/BP2d/Classes/Tela.py	/^class Tela:$/;"	class	line:1
 __init__	/Users/Edgar/Documents/BP2d/Classes/Tela.py	/^    def __init__(self, altura, anchura):$/;"	member	line:2	class:Tela
-getmapa	/Users/Edgar/Documents/BP2d/Classes/Tela.py	/^    def getmapa(self):$/;"	member	line:12	class:Tela
 getlibre	/Users/Edgar/Documents/BP2d/Classes/Tela.py	/^    def getlibre(self):$/;"	member	line:15	class:Tela
 setusado	/Users/Edgar/Documents/BP2d/Classes/Tela.py	/^    def setusado(self, por_usar):$/;"	member	line:18	class:Tela
 getaltura	/Users/Edgar/Documents/BP2d/Classes/Tela.py	/^    def getaltura(self):$/;"	member	line:21	class:Tela
@@ -33,26 +31,40 @@ piezas_l	/Users/Edgar/Documents/BP2d/grasp.py	/^piezas_l = []  # Lista con el ro
 l_piezas	/Users/Edgar/Documents/BP2d/grasp.py	/^l_piezas = []  # Lista con los objetos de las piezas$/;"	variable	line:8
 p_soluciones	/Users/Edgar/Documents/BP2d/grasp.py	/^p_soluciones = []$/;"	variable	line:9
 multiples_s	/Users/Edgar/Documents/BP2d/grasp.py	/^multiples_s = []$/;"	variable	line:10
-InicializarGrasp	/Users/Edgar/Documents/BP2d/grasp.py	/^def InicializarGrasp(li_piezas):$/;"	function	line:13
-returnListaPiezas	/Users/Edgar/Documents/BP2d/grasp.py	/^def returnListaPiezas():$/;"	function	line:20
-cambiarStatusPiezas	/Users/Edgar/Documents/BP2d/grasp.py	/^def cambiarStatusPiezas():$/;"	function	line:25
-printPiezas	/Users/Edgar/Documents/BP2d/grasp.py	/^def printPiezas():$/;"	function	line:31
-calcularPSoluciones	/Users/Edgar/Documents/BP2d/grasp.py	/^def calcularPSoluciones():$/;"	function	line:37
+ancho_del_telon	/Users/Edgar/Documents/BP2d/grasp.py	/^ancho_del_telon = 90$/;"	variable	line:11
+mejores_soluciones	/Users/Edgar/Documents/BP2d/grasp.py	/^mejores_soluciones = [] # Contiene las mejores soluciones encontraas para cada posible solucion$/;"	variable	line:12
+constructor	/Users/Edgar/Documents/BP2d/grasp.py	/^def constructor(piezas_p):$/;"	function	line:14
+movimientos	/Users/Edgar/Documents/BP2d/grasp.py	/^def movimientos(piezas_p, orden_inicial_p, mejor):$/;"	function	line:35
+InicializarGrasp	/Users/Edgar/Documents/BP2d/grasp.py	/^def InicializarGrasp(li_piezas):$/;"	function	line:78
+returnListaPiezas	/Users/Edgar/Documents/BP2d/grasp.py	/^def returnListaPiezas():$/;"	function	line:85
+cambiarStatusPiezas	/Users/Edgar/Documents/BP2d/grasp.py	/^def cambiarStatusPiezas():$/;"	function	line:90
+printPiezas	/Users/Edgar/Documents/BP2d/grasp.py	/^def printPiezas():$/;"	function	line:96
+calcularPSoluciones	/Users/Edgar/Documents/BP2d/grasp.py	/^def calcularPSoluciones():$/;"	function	line:102
+grasp	/Users/Edgar/Documents/BP2d/grasp.py	/^def grasp(piezas_p, mejor_absoluto):$/;"	function	line:147
 Pieza	/Users/Edgar/Documents/BP2d/main.py	/^from Classes.Pieza import Pieza$/;"	namespace	line:1
 Tela	/Users/Edgar/Documents/BP2d/main.py	/^from Classes.Tela import Tela$/;"	namespace	line:2
 attrgetter	/Users/Edgar/Documents/BP2d/main.py	/^from operator import attrgetter$/;"	namespace	line:3
 grasp	/Users/Edgar/Documents/BP2d/main.py	/^import grasp$/;"	namespace	line:4
-ancho_del_telon	/Users/Edgar/Documents/BP2d/main.py	/^ancho_del_telon = 24$/;"	variable	line:6
-renglones	/Users/Edgar/Documents/BP2d/main.py	/^renglones = []$/;"	variable	line:7
-piezas	/Users/Edgar/Documents/BP2d/main.py	/^piezas = []$/;"	variable	line:8
-telas	/Users/Edgar/Documents/BP2d/main.py	/^telas = []$/;"	variable	line:9
-orden_solucion_i	/Users/Edgar/Documents/BP2d/main.py	/^orden_solucion_i = []$/;"	variable	line:10
-nombre_instancia	/Users/Edgar/Documents/BP2d/main.py	/^nombre_instancia = input("Ingrese el nombre de la instancia \\n")$/;"	variable	line:11
-archivo	/Users/Edgar/Documents/BP2d/main.py	/^archivo = open("Instancias\/" + nombre_instancia + ".csv")$/;"	variable	line:12
-no_piezas	/Users/Edgar/Documents/BP2d/main.py	/^no_piezas = int(len(renglones))$/;"	variable	line:22
-i	/Users/Edgar/Documents/BP2d/main.py	/^i = 1$/;"	variable	line:24
-nuevaPieza	/Users/Edgar/Documents/BP2d/main.py	/^    nuevaPieza = Pieza(float(pieza_info[0]), float(pieza_info[1]), int(i))$/;"	variable	line:26
-i_pieza	/Users/Edgar/Documents/BP2d/main.py	/^i_pieza = 0$/;"	variable	line:38
-i_tela	/Users/Edgar/Documents/BP2d/main.py	/^i_tela = 0$/;"	variable	line:39
-altura_total_si	/Users/Edgar/Documents/BP2d/main.py	/^altura_total_si = 0$/;"	variable	line:53
-mejor_solucion	/Users/Edgar/Documents/BP2d/main.py	/^mejor_solucion = altura_total_si$/;"	variable	line:59
+copy	/Users/Edgar/Documents/BP2d/main.py	/^import copy$/;"	namespace	line:5
+ancho_del_telon	/Users/Edgar/Documents/BP2d/main.py	/^ancho_del_telon = 90$/;"	variable	line:7
+renglones	/Users/Edgar/Documents/BP2d/main.py	/^renglones = []$/;"	variable	line:8
+piezas	/Users/Edgar/Documents/BP2d/main.py	/^piezas = []$/;"	variable	line:9
+telas	/Users/Edgar/Documents/BP2d/main.py	/^telas = []$/;"	variable	line:10
+orden_solucion_i	/Users/Edgar/Documents/BP2d/main.py	/^orden_solucion_i = []$/;"	variable	line:11
+nombre_instancia	/Users/Edgar/Documents/BP2d/main.py	/^nombre_instancia = input("Ingrese el nombre de la instancia \\n")$/;"	variable	line:12
+archivo	/Users/Edgar/Documents/BP2d/main.py	/^archivo = open("Instancias\/" + nombre_instancia + ".csv")$/;"	variable	line:13
+no_piezas	/Users/Edgar/Documents/BP2d/main.py	/^no_piezas = int(len(renglones))$/;"	variable	line:23
+i	/Users/Edgar/Documents/BP2d/main.py	/^i = 1$/;"	variable	line:25
+nuevaPieza	/Users/Edgar/Documents/BP2d/main.py	/^    nuevaPieza = Pieza(float(pieza_info[0]), float(pieza_info[1]), int(i))$/;"	variable	line:27
+constructor	/Users/Edgar/Documents/BP2d/main.py	/^def constructor(piezas_p):$/;"	function	line:34
+movimientos	/Users/Edgar/Documents/BP2d/main.py	/^def movimientos(piezas_p, orden_inicial_p, mejor):$/;"	function	line:57
+telas	/Users/Edgar/Documents/BP2d/main.py	/^telas = copy.deepcopy(constructor(piezas))$/;"	variable	line:104
+altura_total_si	/Users/Edgar/Documents/BP2d/main.py	/^altura_total_si = 0$/;"	variable	line:105
+mejor_solucion	/Users/Edgar/Documents/BP2d/main.py	/^mejor_solucion = altura_total_si$/;"	variable	line:112
+tela_movimiento	/Users/Edgar/Documents/BP2d/main.py	/^tela_movimiento = copy.deepcopy(movimientos(piezas, orden_solucion_i, mejor_solucion))$/;"	variable	line:123
+altura_movimiento	/Users/Edgar/Documents/BP2d/main.py	/^altura_movimiento = 0$/;"	variable	line:125
+mejor_solucion	/Users/Edgar/Documents/BP2d/main.py	/^    mejor_solucion = altura_movimiento$/;"	variable	line:132
+resultadograsp	/Users/Edgar/Documents/BP2d/main.py	/^resultadograsp = grasp.grasp(piezas, mejor_solucion)$/;"	variable	line:140
+comprobar_altura	/Users/Edgar/Documents/BP2d/main.py	/^    comprobar_altura = 0$/;"	variable	line:147
+comprobar_altura	/Users/Edgar/Documents/BP2d/main.py	/^     comprobar_altura = 0$/;"	variable	line:155
+tela_movimiento	/Users/Edgar/Documents/BP2d/main.py	/^     tela_movimiento = resultadograsp[1]$/;"	variable	line:156
