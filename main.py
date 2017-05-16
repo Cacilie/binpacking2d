@@ -3,6 +3,7 @@ from Classes.Tela import Tela
 from operator import attrgetter
 import grasp
 import copy
+import time
 
 ancho_del_telon = 90
 renglones = []
@@ -14,12 +15,14 @@ archivo = open("Instancias/" + nombre_instancia + ".csv")
 for linea in archivo.readlines():
     renglones.append(linea.rstrip("\n").split(","))
 
+inicioTotal = time.clock()
 renglones.pop(0)
 renglones.pop(0)
 renglones.pop(0)
 renglones.pop(0)
 renglones.pop(0)
 
+inicioConstructorInicial = time.clock()
 no_piezas = int(len(renglones))
 
 i = 1
@@ -102,6 +105,7 @@ def movimientos(piezas_p, orden_inicial_p, mejor):
 
 
 telas = copy.deepcopy(constructor(piezas))
+finConstructorInicial = time.clock()
 altura_total_si = 0
 
 print("\nSolución Inicial\n")
@@ -119,9 +123,9 @@ for tela in telas:
     print(tela.getcosidos())
 
 #movimientos
-
+inicioMovimiento = time.clock()
 tela_movimiento = copy.deepcopy(movimientos(piezas, orden_solucion_i, mejor_solucion))
-
+finMovimiento = time.clock()
 altura_movimiento = 0
 for tela in tela_movimiento:
     altura_movimiento += tela.getaltura()
@@ -133,11 +137,13 @@ if(altura_movimiento > 0):
 
 #grasp
 
-
+inicioMultiarranque = time.clock()
 grasp.InicializarGrasp(piezas)
 grasp.cambiarStatusPiezas()
 grasp.calcularPSoluciones()
 resultadograsp = grasp.grasp(piezas, mejor_solucion)
+
+finMultiarranque = time.clock()
 
 if resultadograsp == -1:
     print("\nNo hubo mejora\n")
@@ -161,3 +167,11 @@ else:
         print(hilo.getcosidos())
         comprobar_altura += hilo.getaltura()
     print("COMPROBACION:: "+ str(comprobar_altura))
+
+finTotal = time.clock()
+
+print("\nTIEMPOS\n")
+print("\nTiempo total: " + str(finTotal - inicioTotal))
+print("\nTiempo Constructor: " + str(finConstructorInicial - inicioConstructorInicial))
+print("\nTiempo Movimientos iniciales: " + str(finMovimiento - inicioMovimiento))
+print("\nTiempo de multiarranque: "  + str(finMultiarranque - inicioMultiarranque))
