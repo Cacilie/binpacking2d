@@ -110,7 +110,7 @@ def calcularPSoluciones():
         menor_id = 0
         cce = 0
         cmin = 0
-        alfa = 0.000001
+        alfa = 0.4
         while len(ids_seleccionados) < len(l_piezas):
             posibles_agregar = []
             for p in l_piezas:
