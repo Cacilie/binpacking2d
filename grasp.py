@@ -124,7 +124,7 @@ def calcularPSoluciones():
                     cmin = p.getarea()
             # print("Menor no asignado " + str(cmin))
             # ids_seleccionados.append(menor_id)
-            cce = cmin + (alfa * (mayor - cmin))
+            cce = mayor - (alfa * (mayor - cmin))
             for p in l_piezas:
                 if p.getarea() >= cmin and p.getarea() <= cce and p.getid() not in ids_seleccionados:
                     posibles_agregar.append(p.getid())
@@ -141,7 +141,7 @@ def calcularPSoluciones():
             #print("posibles a agregar " + str(posibles_agregar))
             eleccion = random.randrange(len(posibles_agregar))
             ids_seleccionados.append(posibles_agregar[eleccion])
-        ids_seleccionados.reverse()
+        # ids_seleccionados.reverse()
         multiples_s.append(ids_seleccionados)
 
 def grasp(piezas_p, mejor_absoluto):
